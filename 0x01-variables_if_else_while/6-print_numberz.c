@@ -1,14 +1,16 @@
 #include <stdio.h>
 
 /**
- * main - entry point for code
+ * main - entry point
  *
- * Return: always 0 success
+ * Return: always 0
  */
 int main(void)
 {
-	int i;
+	int num;
 
-	
-        return(0);
+	for (num = 0, num <= 9; num++)
+		putchar((num % 10) + '0');
+	putchar('\n');
+	return (0);
 }
