@@ -7,20 +7,25 @@
  */
 int main(void)
 {
-	int i, j;
+	int c;
+	int d = 0;
 
-	for (i = 0; i < 10; i++)
+	while (d < 10)
 	{
-		for (j = 0; j < 10; j++)
+		c = 0;
+		while (c < 10)
 		{
-			if (j > i)
+			if (d != c && d < c)
 			{
-				putchar(i + '0');
-				putchar(j + '0');
-				putchar(',');
-				putchar(' ');
-			}
-		}
+				putchar('0' + d);
+				putchar('0' + c);
+				if (c + d != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			} c++;
+		} d++;
 	}
 	putchar('\n');
 	return (0);
