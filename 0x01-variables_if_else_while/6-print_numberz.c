@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - entry point for data
+ * main - entry point
  *
  * Return: always 0 success
  */
@@ -11,7 +11,7 @@ int main(void)
 
 	for (num = 0; num <= 10; num++)
 	{
-		putchar(i + '0');
+		putchar((num % 10) + '0');
 	}
 	putchar('\n');
 	return (0);
