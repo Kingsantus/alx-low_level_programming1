@@ -3,18 +3,13 @@
 
 /*
  * binary_to_uint - Converts a binary number string to an unsigned integer
- * @b: Pointer to the binary string
- *
  * This function takes a pointer to a string of '0' and '1' characters,
- * and returns the unsigned integer value corresponding to the binary
- * representation of the string. If the string is invalid (contains
- * characters other than '0' and '1'), the function returns 0.
  *
  * Return: The unsigned integer value of the binary string, or 0 if invalid
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int result = 0;
+	unsigned int a = 0;
 	int i;
 
 	if (!b)
@@ -27,7 +22,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			return (0);
 		}
-		result = 2 * result + (b[i] - '0');
+		a = 2 * a + (b[i] - '0');
 	}
-	return (result);
+	return (a);
 }
