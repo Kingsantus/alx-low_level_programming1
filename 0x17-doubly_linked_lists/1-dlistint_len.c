@@ -11,15 +11,10 @@ size_t dlistint_len(const dlistint_t *h)
 	const dlistint_t *ptr = h;
 	size_t count = 0;
 
-	if (ptr == NULL)
-		printf("Node is empty");
-	else
+	while (ptr != NULL)
 	{
-		while (ptr != NULL)
-		{
-			ptr = ptr->next;
-			count++;
-		}
+		ptr = ptr->next;
+		count++;
 	}
 
 	return (count);
