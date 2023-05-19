@@ -1,11 +1,10 @@
 #include "lists.h"
 
 /**
- * print_dlistint: loop through node using ptr
- * dlistint_t@ initialize ptr to h
- * count@ is incemented through loop to print next node
+ * print_dlistint - Prints the elements of a doubly linked list.
+ * @h: Pointer to the head of the list.
  *
- * return: return count
+ * Return: The number of elements printed.
  */
 size_t print_dlistint(const dlistint_t *h)
 {
