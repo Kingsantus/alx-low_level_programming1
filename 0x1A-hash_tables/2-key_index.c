@@ -16,3 +16,32 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 	return (hash_value % size);
 }
 
+
+/**
+ * shash_table_delete - Deletes a sorted hash table
+ * @ht: hash table to delete
+ */
+void shash_table_delete(shash_table_t *ht)
+{
+	shash_node_t *tmp, *prev;
+	unsigned long int i;
+
+	if (ht == NULL)
+		return;
+
+	for (i = 0; i < ht->size; i++)
+	{
+		tmp = ht->array[i];
+		while (tmp != NULL)
+		{
+			prev = tmp;
+			tmp = tmp->next;
+			free(prev->key);
+			free(prev->value);
+			free(prev);
+		}
+	}
+
+	free(ht->array);
+	free(ht);
+}
